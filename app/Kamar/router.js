@@ -4,8 +4,9 @@ const multer = require("multer");
 const upload = multer({ dest: "public/images/" });
 const VerifyToken = require("../../middleware/VerifyToken.js");
 
-const { getKamar, getKamarById, createKamar, deleteKamar, updateKamar } = require("./controller");
+const { getKamar, getKamarById, createKamar, deleteKamar, updateKamar, home } = require("./controller");
 
+router.get("/", home);
 router.get("/kamar", getKamar);
 router.get("/kamar/:id", VerifyToken, getKamarById);
 router.post("/kamar", upload.single("file"), createKamar);

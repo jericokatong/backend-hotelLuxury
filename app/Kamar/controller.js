@@ -146,4 +146,12 @@ const updateKamar = async (req, res, next) => {
   }
 };
 
-module.exports = { getKamar, getKamarById, createKamar, deleteKamar, updateKamar };
+const home = async (req, res, next) => {
+  try {
+    res.json({ msg: "helo" });
+  } catch (error) {
+    console.log(error.message);
+  }
+};
+
+module.exports = { getKamar, getKamarById, createKamar, deleteKamar, updateKamar, home };
