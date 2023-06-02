@@ -2,7 +2,7 @@ const DataTypes = require("sequelize");
 const db = require("../../database");
 
 const Kamar = db.define(
-  "Kamar",
+  "kamar",
   {
     kamar_id: {
       type: DataTypes.INTEGER,
