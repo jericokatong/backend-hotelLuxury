@@ -3,8 +3,7 @@ var express = require("express");
 var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
-const fs = require("fs");
-const multer = require("multer");
+const cors = require("cors");
 
 var pelangganRouter = require("./app/Pelanggan/router.js");
 var kamarRouter = require("./app/Kamar/router.js");
@@ -12,6 +11,12 @@ var reservasiRouter = require("./app/Reservasi/router.js");
 var adminRouter = require("./app/Admin/router.js");
 
 var app = express();
+app.use(
+  cors({
+    credentials: true,
+    origin: "http://localhost:3000",
+  })
+);
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
