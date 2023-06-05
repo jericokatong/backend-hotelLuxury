@@ -8,8 +8,12 @@
   ],
   "routes": [
     {
+      "src": "/api/(.*)",
+      "dest": "/bin/www"
+    },
+    {
       "src": "/(.*)",
-      "dest": "app.js"
+      "dest": "/bin/www"
     }
   ]
 }
