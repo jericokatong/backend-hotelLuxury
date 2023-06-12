@@ -65,7 +65,7 @@ const RegisterPelanggan = async (req, res, next) => {
     const ext = path.extname(file.originalname);
     const fileName = file.filename + ext;
 
-    const url = `${req.protocol}://${req.get("host")}/images/${fileName}`;
+    const url = `${req.protocol}://${req.get("host")}/tmp/${fileName}`;
     const allowedType = [".png", ".jpg", ".jpeg"];
 
     console.log(file);
