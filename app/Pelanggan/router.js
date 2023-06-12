@@ -1,7 +1,7 @@
 var express = require("express");
 var router = express.Router();
 const multer = require("multer");
-const upload = multer({ dest: "tmp/images/" });
+const upload = multer({ dest: "tmp/" });
 
 const { getPelanggan, RegisterPelanggan, LoginPelanggan, token, Logout, editPelanggan, deletePelanggan, getPelangganByEmail } = require("./controller");
 const VerifyToken = require("../../middleware/VerifyToken.js");
